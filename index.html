@@ -3,138 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirection automatique</title>
+    <meta http-equiv="refresh" content="0; url=https://script.google.com/macros/s/AKfycbwk_W_H4TPy98ZUz3PVmBm51gaurilE956MKO0jVJrCy_hJSzpvnhZYunvgMef9R48/exec">
+    <title>Redirection en cours...</title>
     <style>
-        * {
+        body {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             color: white;
-        }
-
-        .container {
             text-align: center;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 3rem;
-            border-radius: 20px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-            border: 1px solid rgba(255, 255, 255, 0.2);
         }
-
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        
+        .loading {
+            font-size: 18px;
         }
-
-        p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-
-        .countdown {
-            font-size: 3rem;
-            font-weight: bold;
-            color: #ffeb3b;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            margin: 1rem 0;
-        }
-
-        .loader {
-            width: 50px;
-            height: 50px;
+        
+        .spinner {
             border: 4px solid rgba(255, 255, 255, 0.3);
-            border-top: 4px solid #ffeb3b;
             border-radius: 50%;
-            margin: 0 auto;
+            border-top: 4px solid white;
+            width: 40px;
+            height: 40px;
             animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
         }
-
+        
         @keyframes spin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
-
-        .manual-redirect {
-            margin-top: 2rem;
-        }
-
-        .btn {
-            background: #ffeb3b;
-            color: #333;
-            border: none;
-            padding: 12px 30px;
-            font-size: 1.1rem;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-weight: bold;
-        }
-
-        .btn:hover {
-            background: #ffd700;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .link {
-            color: #ffeb3b;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .link:hover {
-            text-decoration: underline;
-        }
     </style>
 </head>
 <body>
-   
+    <div class="loading">
+        <div class="spinner"></div>
+        <p>Redirection en cours...</p>
+    </div>
 
     <script>
-        // Configuration
-        const REDIRECT_URL = "https://script.google.com/macros/s/AKfycbwk_W_H4TPy98ZUz3PVmBm51gaurilE956MKO0jVJrCy_hJSzpvnhZYunvgMef9R48/exec"; // URL de destination
-        const COUNTDOWN_TIME = 1; // Temps en secondes avant redirection
-
-        let countdown = COUNTDOWN_TIME;
-        const countdownElement = document.getElementById('countdown');
-        const destinationLink = document.getElementById('destinationLink');
-
-        // Mettre à jour l'URL de destination
-        destinationLink.href = REDIRECT_URL;
-
-        // Fonction de mise à jour du compte à rebours
-        function updateCountdown() {
-            countdownElement.textContent = countdown;
-            countdown--;
-            
-            if (countdown < 0) {
-                redirectNow();
-            }
-        }
-
-        // Fonction de redirection immédiate
-        function redirectNow() {
-            window.location.href = REDIRECT_URL;
-        }
-
-        // Démarrer le compte à rebours
-        updateCountdown();
-        const countdownInterval = setInterval(updateCountdown, 1000);
-
-        // Redirection automatique après le délai
-        setTimeout(redirectNow, COUNTDOWN_TIME * 1000);
+        // Redirection JavaScript pour plus de fiabilité
+        window.onload = function() {
+            setTimeout(function() {
+                window.location.href = "https://script.google.com/macros/s/AKfycbwk_W_H4TPy98ZUz3PVmBm51gaurilE956MKO0jVJrCy_hJSzpvnhZYunvgMef9R48/exec";
+            }, 100);
+        };
     </script>
 </body>
 </html>
