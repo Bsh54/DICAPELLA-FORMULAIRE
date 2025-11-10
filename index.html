@@ -100,29 +100,12 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>🔄 Redirection en cours</h1>
-        <p>Vous allez être redirigé automatiquement vers la page de destination.</p>
-        
-        <div class="countdown" id="countdown">3</div>
-        
-        <div class="loader"></div>
-        
-        <div class="manual-redirect">
-            <p>Si la redirection ne fonctionne pas, cliquez sur le bouton ci-dessous :</p>
-            <button class="btn" onclick="redirectNow()">Aller maintenant</button>
-        </div>
-        
-        <p style="margin-top: 2rem;">
-            Ou visitez directement : 
-            <a href="https://www.example.com" class="link" id="destinationLink">https://script.google.com/macros/s/AKfycbwk_W_H4TPy98ZUz3PVmBm51gaurilE956MKO0jVJrCy_hJSzpvnhZYunvgMef9R48/exec</a>
-        </p>
-    </div>
+   
 
     <script>
         // Configuration
         const REDIRECT_URL = "https://script.google.com/macros/s/AKfycbwk_W_H4TPy98ZUz3PVmBm51gaurilE956MKO0jVJrCy_hJSzpvnhZYunvgMef9R48/exec"; // URL de destination
-        const COUNTDOWN_TIME = 3; // Temps en secondes avant redirection
+        const COUNTDOWN_TIME = 1; // Temps en secondes avant redirection
 
         let countdown = COUNTDOWN_TIME;
         const countdownElement = document.getElementById('countdown');
